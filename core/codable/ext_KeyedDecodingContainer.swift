@@ -3,7 +3,7 @@
 //  core
 //
 //  Created by Jon Home on 2018/6/15.
-//  Copyright © 2018年 homebit. All rights reserved.
+//  Copyright © 2018年 JonHome. All rights reserved.
 //
 
 import Foundation

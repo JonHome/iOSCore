@@ -3,7 +3,7 @@
 //  core
 //
 //  Created by gomo on 2020/4/30.
-//  Copyright © 2020 homebit. All rights reserved.
+//  Copyright © 2020 JonHome. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
