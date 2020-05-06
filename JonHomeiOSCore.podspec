@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "JonHomeiOSCore.podspec"
-  spec.version      = "0.0.3"
+  spec.name         = "JonHomeiOSCore"
+  spec.version      = "0.0.4"
   spec.summary      = "Core for Myself"
 
   # spec.description  = <<-DESC
