@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
 
   spec.platform     = :ios, "10.0"
 
-  spec.source       = { :git => "https://github.com/JonHome/iOSCore.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/JonHome/iOSCore.git", :tag => "v_#{spec.version}" }
 
   spec.source_files = "source", "source/**/*.{swift,h,m}"
   
