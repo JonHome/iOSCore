@@ -1,6 +1,10 @@
 # iOSCore
 iOS extension core utils swift
 
+
+[![Platform](https://img.shields.io/cocoapods/p/JonHomeiOSCore.svg?style=flat)](https://github.com/JonHome/JonHomeiOSCore)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/JonHomeiOSCore.svg)](https://cocoapods.org/pods/JonHomeiOSCore)
+
 ## Contents
 - [License](#license)
 
