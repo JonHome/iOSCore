@@ -6,7 +6,7 @@ iOS extension core utils swift
 
 ## Requirements
 
-- iOS 10.0+
+- iOS 11.0+
 - Xcode 11.0+
 - Swift 5.0+
 
