@@ -74,10 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F0165D0D245B2C9C001B56D2 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				F0AA3A4C245B080100E99AE4 /* utils */,
+				F0AA3A4B245B07F900E99AE4 /* ext */,
+				F0AA3A30245B013900E99AE4 /* codable */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
 		F0AA3A06245AF70700E99AE4 = {
 			isa = PBXGroup;
 			children = (
-				F0AA3A12245AF70700E99AE4 /* core */,
+				F0AA3A12245AF70700E99AE4 /* source */,
 				F0AA3A1D245AF70700E99AE4 /* coreTests */,
 				F0AA3A11245AF70700E99AE4 /* Products */,
 			);
@@ -92,16 +102,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F0AA3A12245AF70700E99AE4 /* core */ = {
+		F0AA3A12245AF70700E99AE4 /* source */ = {
 			isa = PBXGroup;
 			children = (
-				F0AA3A4C245B080100E99AE4 /* utils */,
-				F0AA3A4B245B07F900E99AE4 /* ext */,
-				F0AA3A30245B013900E99AE4 /* codable */,
+				F0165D0D245B2C9C001B56D2 /* class */,
 				F0AA3A13245AF70700E99AE4 /* core.h */,
 				F0AA3A14245AF70700E99AE4 /* Info.plist */,
 			);
-			path = core;
+			path = source;
 			sourceTree = "<group>";
 		};
 		F0AA3A1D245AF70700E99AE4 /* coreTests */ = {
