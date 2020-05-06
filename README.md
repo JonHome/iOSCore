@@ -6,6 +6,7 @@ iOS extension core utils swift
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/JonHomeiOSCore.svg)](https://cocoapods.org/pods/JonHomeiOSCore)
 
 ## Contents
+- [Installation](#installation)
 - [License](#license)
 
 ## Requirements
