@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "JonHomeiOSCore"
-  spec.version      = "0.0.5"
+  spec.version      = "0.0.6"
   spec.summary      = "Core for Myself"
 
   # spec.description  = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "JonHome" => "wei3390961@163.com" }
 
-  spec.platform     = :ios, "10.0"
+  spec.platform     = :ios, "11.0"
 
   spec.source       = { :git => "https://github.com/JonHome/iOSCore.git", :tag => "v_#{spec.version}" }
 
