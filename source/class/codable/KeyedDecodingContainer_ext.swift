@@ -183,7 +183,6 @@ public extension KeyedEncodingContainerProtocol where Key == JSONCodingKeys {
 
 
 
-// original https://gist.github.com/loudmouth/332e8d89d8de2c1eaf81875cfcd22e24
 public struct JSONCodingKeys: CodingKey {
     public var stringValue: String
     

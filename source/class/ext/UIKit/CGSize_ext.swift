@@ -10,16 +10,16 @@ import Foundation
 import UIKit
 
 
-func *(l: CGSize, r: CGFloat)-> CGSize {
+public func *(l: CGSize, r: CGFloat)-> CGSize {
     return CGSize(width: r * l.width, height: r * l.height)
 }
 
-func *(l: CGSize,r: CGSize)-> CGSize{
+public func *(l: CGSize,r: CGSize)-> CGSize{
     return CGSize(width: l.width * r.width, height: l.height*r.height)
 }
 
 
-func *(l: CGSize?, r: CGSize)-> CGSize? {
+public func *(l: CGSize?, r: CGSize)-> CGSize? {
     guard let l = l else{
         return nil
     }
@@ -28,7 +28,7 @@ func *(l: CGSize?, r: CGSize)-> CGSize? {
     return a
 }
 
-func *(l: CGSize?, r: CGFloat)-> CGSize? {
+public func *(l: CGSize?, r: CGFloat)-> CGSize? {
     guard let l = l else{
         return nil
     }
@@ -36,15 +36,15 @@ func *(l: CGSize?, r: CGFloat)-> CGSize? {
     return a
 }
 
-func /( l : CGSize, r: CGSize) -> CGSize {
+public func /( l : CGSize, r: CGSize) -> CGSize {
     return CGSize(width:l.width / r.width,height: l.height / r.height)
 }
 
-func /( l : CGSize, r: CGFloat) -> CGSize {
+public func /( l : CGSize, r: CGFloat) -> CGSize {
     return CGSize(width:l.width / r, height: l.height / r)
 }
 
-func /( l: CGSize?, r: CGSize) -> CGSize? {
+public func /( l: CGSize?, r: CGSize) -> CGSize? {
     guard let l = l else{
         return nil
     }
@@ -53,24 +53,24 @@ func /( l: CGSize?, r: CGSize) -> CGSize? {
     return a
 }
 
-func +( l : CGSize, r: CGFloat) -> CGSize {
+public func +( l : CGSize, r: CGFloat) -> CGSize {
     return CGSize(width:l.width + r, height: l.height + r)
 }
 
-func +( l : CGSize, r: CGSize) -> CGSize {
+public func +( l : CGSize, r: CGSize) -> CGSize {
     return CGSize(width:l.width + r.width,height: l.height + r.height)
 }
 
-func -( l : CGSize, r: CGSize) -> CGSize {
+public func -( l : CGSize, r: CGSize) -> CGSize {
     return CGSize(width:l.width - r.width,height: l.height - r.height)
 }
 
 
-func -( l : CGSize, r: CGFloat) -> CGSize {
+public func -( l : CGSize, r: CGFloat) -> CGSize {
     return CGSize(width:l.width - r, height: l.height - r)
 }
 
-func -(l : CGSize?, r: CGFloat) -> CGSize? {
+public func -(l : CGSize?, r: CGFloat) -> CGSize? {
     guard let l = l else{
         return nil
     }
@@ -79,7 +79,7 @@ func -(l : CGSize?, r: CGFloat) -> CGSize? {
     return a
 }
 
-func -(l : CGSize?, r: CGSize) -> CGSize? {
+public func -(l : CGSize?, r: CGSize) -> CGSize? {
     guard let l = l else{
         return nil
     }
@@ -91,19 +91,19 @@ func -(l : CGSize?, r: CGSize) -> CGSize? {
 
 
 extension CGSize {
-    var point: CGPoint {
+    public var point: CGPoint {
         return CGPoint(x: self.width, y: self.height)
     }
     
-    var bounds: CGRect {
+    public var bounds: CGRect {
         return CGRect.init(origin: .zero, size: self)
     }
     
-    var minLength: CGFloat{
+    public var minLength: CGFloat{
         return min(self.width, self.height)
     }
     
-    var maxLength: CGFloat{
+    public var maxLength: CGFloat{
         return max(self.width, self.height)
     }
 }

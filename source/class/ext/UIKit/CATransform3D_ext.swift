@@ -12,7 +12,7 @@ import UIKit
 
 
 extension CATransform3D {
-    func decomposeTRS() -> (SIMD3<Float>, SIMD3<Float>, SIMD3<Float>) {
+    public func decomposeTRS() -> (SIMD3<Float>, SIMD3<Float>, SIMD3<Float>) {
         let m0 = SIMD3<Float>(Float(self.m11), Float(self.m12), Float(self.m13))
         let m1 = SIMD3<Float>(Float(self.m21), Float(self.m22), Float(self.m23))
         let m2 = SIMD3<Float>(Float(self.m31), Float(self.m32), Float(self.m33))

@@ -9,7 +9,7 @@
 import Foundation
 
 
-func runInMain<T>(_ block:()->(T)) -> T {
+public func runInMain<T>(_ block:()->(T)) -> T {
     let t: T
     if (Thread.current == Thread.main){
         t = block()
@@ -19,7 +19,7 @@ func runInMain<T>(_ block:()->(T)) -> T {
     return t
 }
 
-func runInMainAsync(time: DispatchTimeInterval = .seconds(0), _ block:(()->())?) {
+public func runInMainAsync(time: DispatchTimeInterval = .seconds(0), _ block:(()->())?) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
         block?()
     }

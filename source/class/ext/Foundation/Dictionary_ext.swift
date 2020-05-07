@@ -9,7 +9,7 @@
 import Foundation
 
 extension Dictionary {
-   var queryString: String {
+   public var queryString: String {
       var output: String = ""
       for (key,value) in self {
           output += "\(key)=\(value)&"
