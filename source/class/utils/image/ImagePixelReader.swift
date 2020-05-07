@@ -9,22 +9,22 @@
 import Foundation
 import UIKit
 
-class ImagePixelReader {
+public class ImagePixelReader {
 
-    enum Component:Int {
+    public enum Component:Int {
         case r = 0
         case g = 1
         case b = 2
         case alpha = 3
     }
 
-    struct Color {
-        var r:UInt8
-        var g:UInt8
-        var b:UInt8
-        var a:UInt8
+    public struct Color {
+        public var r:UInt8
+        public var g:UInt8
+        public var b:UInt8
+        public var a:UInt8
 
-        var uiColor:UIColor {
+        public var uiColor:UIColor {
             return UIColor(red:CGFloat(r)/255.0,
                            green:CGFloat(g)/255.0,
                            blue:CGFloat(b)/255.0,
@@ -33,7 +33,7 @@ class ImagePixelReader {
 
     }
 
-    let image:UIImage
+    private let image:UIImage
     private var data:CFData
     private let pointer:UnsafePointer<UInt8>
     private let scale:Int
@@ -41,7 +41,7 @@ class ImagePixelReader {
     private let bytesPerPixelBitStep: Int
     private let bitsPerComponent:Int
 
-    init?(image:UIImage){
+    public init?(image:UIImage){
 
         self.image = image
         guard let cgImage = self.image.cgImage,
@@ -58,7 +58,7 @@ class ImagePixelReader {
         self.pointer = pointer
     }
 
-    func at(x:Int, y:Int, component:Component)->UInt8{
+    public func at(x:Int, y:Int, component:Component)->UInt8{
 
         assert(CGFloat(x) < image.size.width)
         assert(CGFloat(y) < image.size.height)
@@ -69,7 +69,7 @@ class ImagePixelReader {
         return pointer[pixelPosition + component.rawValue * bytesPerPixelBitStep]
     }
 
-    func at(x:Int, y:Int)->Color{
+    public func at(x:Int, y:Int)->Color{
 
         assert(CGFloat(x) < image.size.width)
         assert(CGFloat(y) < image.size.height)
@@ -90,7 +90,7 @@ class ImagePixelReader {
 }
 
 extension UIImage{
-    var generateImagePixelReader: ImagePixelReader? {
+    public func generateImagePixelReader() -> ImagePixelReader? {
         return ImagePixelReader.init(image: self)
     }
 }

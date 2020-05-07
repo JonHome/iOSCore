@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 
-func +( l : CGRect, r: CGPoint) -> CGRect {
+public func +( l : CGRect, r: CGPoint) -> CGRect {
     return CGRect.init(origin: l.origin + r, size: l.size)
 }
 
-func +( l : CGRect, r: CGSize) -> CGRect {
+public func +( l : CGRect, r: CGSize) -> CGRect {
     return CGRect.init(origin: l.origin, size: l.size + r)
 }
 
-func +( l : CGRect, r: CGRect) -> CGRect {
+public func +( l : CGRect, r: CGRect) -> CGRect {
     return CGRect.init(origin: l.origin + r.origin, size: l.size + r.size)
 }

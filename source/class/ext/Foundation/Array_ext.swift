@@ -11,7 +11,7 @@ import Foundation
 
 extension Array {
     
-    func get(index: Int) -> Element? {
+    public func get(index: Int) -> Element? {
         if 0 <= index && index < count {
             return self[index]
         } else {
@@ -23,7 +23,7 @@ extension Array {
 extension Array where Element: Equatable {
     
     // Remove first collection element that is equal to the given `object`:
-    mutating func syncRemove(_ element: Element) {
+    public mutating func syncRemove(_ element: Element) {
         objc_sync_enter(self)
         if let index = firstIndex(of: element) {
             remove(at: index)
@@ -34,7 +34,7 @@ extension Array where Element: Equatable {
 
 
 extension Sequence {
-    func group<GroupingType: Hashable>(by key: (Iterator.Element) -> GroupingType) -> [[Iterator.Element]] {
+    public func group<GroupingType: Hashable>(by key: (Iterator.Element) -> GroupingType) -> [[Iterator.Element]] {
         var groups: [GroupingType: [Iterator.Element]] = [:]
         var groupsOrder: [GroupingType] = []
         forEach { element in

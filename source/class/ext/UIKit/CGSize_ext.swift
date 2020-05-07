@@ -70,8 +70,6 @@ func -( l : CGSize, r: CGFloat) -> CGSize {
     return CGSize(width:l.width - r, height: l.height - r)
 }
 
-
-
 func -(l : CGSize?, r: CGFloat) -> CGSize? {
     guard let l = l else{
         return nil
