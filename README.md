@@ -48,4 +48,4 @@ $ pod install
 
 ## License
 
-SnapKit is released under the MIT license. See LICENSE for details.
+JonHomeiOSCore is released under the MIT license. See LICENSE for details.
