@@ -24,3 +24,10 @@ public func runInMainAsync(time: DispatchTimeInterval = .seconds(0), _ block:(()
         block?()
     }
 }
+
+public func synchronize<T>(lockObj: AnyObject, closure: () -> T) -> T{
+    objc_sync_enter(lockObj)
+    let retVal: T = closure()
+    objc_sync_exit(lockObj)
+    return retVal
+}
