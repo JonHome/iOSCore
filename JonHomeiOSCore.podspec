@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "JonHomeiOSCore"
-  spec.version      = "0.0.6"
+  spec.version      = "0.0.7"
   spec.summary      = "Core for Myself"
 
   # spec.description  = <<-DESC
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = { :git => "https://github.com/JonHome/iOSCore.git", :tag => "v_#{spec.version}" }
 
-  spec.source_files = "source/**.{swift,h,m}"
+  spec.source_files = "source/**/*.{swift,h,m}"
   
   spec.swift_version = '5.0'
 end
