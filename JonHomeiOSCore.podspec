@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "JonHomeiOSCore"
-  spec.version      = "0.0.7"
+  spec.version      = ENV['podspec_version'] || "0.0.7"
   spec.summary      = "Core for Myself"
 
   # spec.description  = <<-DESC

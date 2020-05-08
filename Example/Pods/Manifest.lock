@@ -1,0 +1,16 @@
+PODS:
+  - JonHomeiOSCore (0.0.7)
+
+DEPENDENCIES:
+  - JonHomeiOSCore (from `../`)
+
+EXTERNAL SOURCES:
+  JonHomeiOSCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JonHomeiOSCore: 90d8b2868ea18629a2283370e2884669bd2d1009
+
+PODFILE CHECKSUM: 6f5c8fb285a0c157d0144c55f2bd87c93bd873f7
+
+COCOAPODS: 1.9.1
