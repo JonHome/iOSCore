@@ -21,7 +21,8 @@ jobs:
         set -eo pipefail
         export tag=$(git describe HEAD --abbrev=0 --tags `git rev-list --tags --max-count=1`)
         export podspec_version=${tag:2}
+        echo 'podspec_version=$podspec_version'
         pod lib lint --allow-warnings
-        pod trunk push --allow-warnings
+        pod trunk push --allow-warnings --verbose
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
