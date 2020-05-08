@@ -1,0 +1,26 @@
+name: deploy_to_cocoapods
+
+on:
+  push:
+    tags:
+      - 'v_*'
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Cocoapods
+      run: gem install cocoapods
+      
+    - name: Deploy to Cocoapods
+      run: |
+        set -eo pipefail
+        export podspec_version=$(git describe HEAD --abbrev=0 --tags `git rev-list --tags --max-count=1`)
+        pod lib lint --allow-warnings
+        pod trunk push --allow-warnings
+      env:
+        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
